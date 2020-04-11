@@ -50,3 +50,12 @@ what does noiseDeatil() do?
 * This falloff amount can be changed by adding an additional function parameter. 
     * Eg. a falloff factor of 0.75 means each octave will now have 75% impact (25% less) of the previous lower octave. Any value between 0.0 and 1.0 is valid, however note that values greater than 0.5 might result in greater than 1.0 values returned by noise().
 * By changing these parameters, the signal created by the noise() function can be adapted to fit very specific needs and characteristics.
+
+
+#### Challenge - random walk
+
+##### little dot moving on the canvas that picks random direction and walks around the canvas
+
+* the dot randomly chooses between for directions(up, down, left and right)
+
+![](https://i.imgur.com/dOzIYcP.gif)
