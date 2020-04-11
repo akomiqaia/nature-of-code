@@ -12,7 +12,6 @@ function draw() {
   stroke(255);
   strokeWeight(2);
   point(x, y);
-  point(x + 50, y + 50)
 
   let r = floor(random(4)) 
   switch (r){
