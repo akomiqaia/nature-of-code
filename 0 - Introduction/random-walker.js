@@ -1,23 +1,34 @@
+let x;
+let y;
+
 function setup() {
-  createCanvas(400, 400);
-  pixelDensity(1)
+  createCanvas(400,400)
+  x = 200;
+  y = 200;
+  background(51);
 }
 
 function draw() {
-  let yoff = 0;
-  loadPixels();
-  for (let y = 0; y < height; y++) {
-    let xoff = 0;
-    for (let x = 0; x < width; x++) {
-      let index = (x + y * width) * 4;
-      let r = noise(xoff, yoff) * 255
-      pixels[index] = r
-      pixels[index + 1] = r
-      pixels[index + 2] = r
-      pixels[index + 3] = 255
-      xoff += 0.01
-    }
-    yoff += 0.01
+  stroke(255);
+  strokeWeight(2);
+  point(x, y);
+  point(x + 50, y + 50)
+
+  let r = floor(random(4)) 
+  switch (r){
+    case 0:
+      x = x + 3
+    break;
+    case 1:
+      x = x - 3
+    break;
+    case 2:
+      y = y + 3
+    break;
+    case 3:
+      y = y - 3
+    break;
   }
-  updatePixels()
+
+
 }
