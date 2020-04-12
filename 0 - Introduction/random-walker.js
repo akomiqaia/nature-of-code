@@ -3,14 +3,15 @@ let y;
 let inc = 0;
 
 function setup() {
-  createCanvas(200,200)
+  createCanvas(400, 400)
   x = width / 2;
   y = height / 2;
   background(51);
 }
 
+
 function draw() {
-  
+  // console.log(mouseX, mouseY)
   point(x, y);
 
   let randomDirection = floor(random(4)) 

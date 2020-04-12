@@ -51,10 +51,22 @@ what does noiseDeatil() do?
   * Eg. a falloff factor of 0.75 means each octave will now have 75% impact (25% less) of the previous lower octave. Any value between 0.0 and 1.0 is valid, however note that values greater than 0.5 might result in greater than 1.0 values returned by noise().
 * By changing these parameters, the signal created by the noise() function can be adapted to fit very specific needs and characteristics.
 
-#### Challenge - random walk
+---
 
-##### little dot moving on the canvas that picks random direction and walks around the canvas
+### Challenge - random walk
 
-* the dot randomly chooses between for directions(up, down, left and right)
-
+### Basic Setup
+* the point randomly chooses between for directions(up, down, left and right)
 ![](https://i.imgur.com/dOzIYcP.gif)
+
+### Colored the points 
+* the point gets collored randomly using perlin noise algorithm
+![](https://i.imgur.com/c7jFPMK.gif)
+
+### 50% chance that point will move towards the mouse
+* Create a random walker with dynamic probabilities. 
+> For example, it has a 50% chance of moving in the direction of the mouse
+
+### Challenge - Perlin Noise Flow Field
+* instead of pixels we should use vectors. 
+* Instead of giving each pixel a vector we are gonna give a vector to every 20th pixel 
