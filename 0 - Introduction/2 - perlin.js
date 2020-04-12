@@ -11,7 +11,7 @@ function draw() {
     for (let x = 0; x < width; x++) {
       let index = (x + y * width) * 4;
       let r = noise(xoff, yoff, zoff) * 255
-      pixels[index] = r
+      pixels[index] = r 
       pixels[index + 1] = r
       pixels[index + 2] = r
       pixels[index + 3] = 255
