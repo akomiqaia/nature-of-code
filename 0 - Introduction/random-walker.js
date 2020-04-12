@@ -16,19 +16,19 @@ function draw() {
   let randomDirection = floor(random(4)) 
   switch (randomDirection){
     case 0:
-      x = x + 2
+      x = x + 3
       drawColoredRandomWalkerNoise()
     break;
     case 1:
-      x = x - 2
+      x = x - 3
       drawColoredRandomWalkerNoise()
     break;
     case 2:
-      y = y + 2
+      y = y + 3
       drawColoredRandomWalkerNoise()
     break;
     case 3:
-      y = y - 2
+      y = y - 3
       drawColoredRandomWalkerNoise()
     break;
   }
@@ -37,10 +37,9 @@ function draw() {
 
 
 function drawColoredRandomWalkerNoise() {
-  let randomColor = int(map(noise(inc),0,1,0, 255))
-  let r = randomColor + 150
-  let g = randomColor + 70
-  let b = randomColor + 70
+  let r = noise(inc + 10) * 255
+  let g = noise(inc + 20)*255
+  let b = noise(inc + 40)*255
   stroke(r,g,b);
   strokeWeight(2.5);
 }
