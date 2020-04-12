@@ -3,44 +3,57 @@ let y;
 let inc = 0;
 
 function setup() {
-  createCanvas(400, 400)
+  createCanvas(800, 800)
   x = width / 2;
   y = height / 2;
   background(51);
 }
 
-
 function draw() {
-  // console.log(mouseX, mouseY)
-  point(x, y);
-
-  let randomDirection = floor(random(4)) 
-  switch (randomDirection){
-    case 0:
-      x = x + 3
-      drawColoredRandomWalkerNoise()
-    break;
-    case 1:
-      x = x - 3
-      drawColoredRandomWalkerNoise()
-    break;
-    case 2:
-      y = y + 3
-      drawColoredRandomWalkerNoise()
-    break;
-    case 3:
-      y = y - 3
-      drawColoredRandomWalkerNoise()
-    break;
+    point(x, y);
+    let randomDirection = floor(random(4)) 
+    
+    switch (randomDirection){
+          case 0:
+            x = x + 10
+            drawColoredRandomWalkerNoise()
+          break;
+          case 1:
+            x = x - 10
+            drawColoredRandomWalkerNoise()
+          break;
+          case 2:
+            y = y + 10
+            drawColoredRandomWalkerNoise()
+          break;
+          case 3:
+            y = y - 10
+            drawColoredRandomWalkerNoise()
+          break;
+        }
+    inc += 0.01
   }
-  inc += 0.01
-}
 
+function mousedirection (x,y) {
+  if (x < mouseX && y < mouseY) {
+    x += 1
+    y += 1
+  } else if (x < mouseX && y > mouseY) {
+    x += 1
+    y -= 1
+  } else if (x > mouseX && y < mouseY) {
+    x -= 1
+    y += 1
+  } else if (x > mouseX && y > mouseY) {
+    x -= 1
+    y -= 1
+  } 
+}
 
 function drawColoredRandomWalkerNoise() {
   let r = noise(inc + 10) * 255
   let g = noise(inc + 20)*255
   let b = noise(inc + 40)*255
   stroke(r,g,b);
-  strokeWeight(2.5);
+  strokeWeight(10);
 }
