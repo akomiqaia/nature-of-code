@@ -3,7 +3,7 @@ let y;
 let inc = 0;
 
 function setup() {
-  createCanvas(800, 800)
+  createCanvas(400, 400)
   x = width / 2;
   y = height / 2;
   z = width / 2;
@@ -38,7 +38,7 @@ function draw() {
             drawColoredRandomWalkerNoise()
           break;
         }
-    inc += 0.01
+    inc += 0.003
   }
 
 function mousedirection (x,y) {

@@ -71,7 +71,9 @@ what does noiseDeatil() do?
 ![](https://i.imgur.com/dOzIYcP.gif)
 
 ### Colored the points 
+
 * the point gets collored randomly using perlin noise algorithm
+
 ![](https://i.imgur.com/c7jFPMK.gif)
 
 ### Two points mirroring
